@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="ExtraText">
+
+    <item android:title="Animations" ><menu>
+        <item android:id="@+id/navAnim1" android:title="Music Animation"/>
+        <item android:id="@+id/navAnim2" android:title="Japan Animation"/>
+        <item android:id="@+id/navAnim3" android:title="SkiTour Animation"/>
+        <item android:id="@+id/navAnim4" android:title="Forest Animation"/>
+    </menu>
+
+    </item>
+
+
+    <item android:title="Background Color" >
+        <menu>
+            <item android:id="@+id/color0" android:title="Random"/>
+            <item android:id="@+id/color1" android:title="Gold"/>
+            <item android:id="@+id/color2" android:title="Medium SlateBlue"/>
+            <item android:id="@+id/color3" android:title="Lime Green" />
+            <item android:id="@+id/color4" android:title="Sandy Brown"/>
+            <item android:id="@+id/color5" android:title="Fire Brick"/>
+            <item android:id="@+id/color6" android:title="Dark Orchid"/>
+        </menu>
+
+    </item>
+
+    <item android:title="Music Bar Color"  android:visible="false">
+        <menu>
+            <item android:id="@+id/bar1" android:title="White"/>
+            <item android:id="@+id/bar2" android:title="Dark Grey"/>
+            <item android:id="@+id/bar3" android:title="Cyan"/>
+            <item
+                android:id="@+id/bar4"
+                android:icon="@color/colorAccent"
+                android:title="Dark Grenn" />
+            <item android:id="@+id/bar5" android:title="Purple"/>
+        </menu>
+
+    </item>
+
+
+</menu>

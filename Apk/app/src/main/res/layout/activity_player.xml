@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutPlayer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#303030"
+    tools:context="com.game.myAoiMusic.PlayerActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="511dp"
+        android:layout_height="939dp"
+        android:background="#00FFFFFF"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/screen_background_dark_transparent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lav_windmill"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="192dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/txtRecebeSong"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/music"
+        tools:ignore="MissingConstraints" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lav_windmill2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="84dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+        app:layout_constraintEnd_toStartOf="@+id/btnNext"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toEndOf="@+id/btnPrevius"
+        app:lottie_autoPlay="true"
+        app:lottie_colorFilter="#ffff"
+        app:lottie_rawRes="@raw/play"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/txtRecebeSong"
+        android:layout_width="276dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:autoSizeTextType="uniform"
+        android:text="Song Name"
+        android:textAlignment="center"
+        android:textColor="#CFCFCF"
+        android:textSize="12sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/progressSong"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:targetApi="o" />
+
+    <SeekBar
+        android:id="@+id/progressSong"
+        android:layout_width="386dp"
+        android:layout_height="23dp"
+        android:background="@android:color/transparent"
+        android:progressBackgroundTint="#cc0000"
+        android:progressTint="#cc0000"
+        android:thumbTint="#cc0000"
+        app:layout_constraintBottom_toTopOf="@+id/lav_windmill2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UnusedAttribute" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="84dp"
+        android:background="@drawable/ic_skip_next"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lav_windmill2" />
+
+    <Button
+        android:id="@+id/btnPrevius"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginBottom="84dp"
+        android:background="@drawable/ic_skip_previous"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lav_windmill2" />
+
+    <ImageButton
+        android:id="@+id/btnVoltarSong"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button"
+        android:onClick="backMain"
+        android:scaleType="fitCenter"
+        android:tint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.036"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"
+        app:srcCompat="@drawable/ic_keyboard_arrow_down"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/textTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="248dp"
+        android:text="00:00"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/progressSong"
+        app:layout_constraintEnd_toStartOf="@+id/textTimer2"
+        app:layout_constraintHorizontal_bias="0.918"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRecebeSong"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textTimer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="144dp"
+        android:text="00:00"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnChamaMenu"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="52dp"
+        android:background="#00FFFFFF"
+        android:scaleType="center"
+        android:tint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/lav_windmill"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.959"
+        app:layout_constraintStart_toEndOf="@+id/btnVoltarSong"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029"
+        app:srcCompat="@drawable/ic_more_vert"
+        tools:ignore="VectorDrawableCompat" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

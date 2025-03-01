@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#404040"
+    tools:context=".MainActivity"
+    android:focusableInTouchMode="true"
+    android:clickable="true"
+    android:focusable="true">
+
+
+    <EditText
+        android:id="@+id/editTextTextPersonName6"
+        android:layout_width="226dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="125dp"
+        android:background="@drawable/custom_imput_main"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="Search"
+        android:inputType="textPersonName"
+        android:paddingStart="12dp"
+        android:textColor="#333333"
+        android:textColorHint="@android:color/white" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="74dp"
+        android:layout_marginBottom="49dp"
+        android:scrollbarSize="20dp"
+        android:text="Your Songs"
+        android:textColor="#FFFFFF" />
+
+    <ImageView
+        android:id="@+id/reciveUrlImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:onClick="onClickImage"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/logocircleicon" />
+
+    <ImageButton
+        android:id="@+id/btnConfig"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/button"
+        android:tint="#FFFFFF"
+        android:onClick="onClickConfig"
+        app:srcCompat="@drawable/ic_settings"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ListView
+        android:id="@+id/listOfMusic"
+        android:layout_width="match_parent"
+        android:layout_height="750dp"
+        android:layout_below="@+id/editTextTextPersonName6"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="0dp"
+        android:background="@android:color/white">
+
+    </ListView>
+
+</RelativeLayout>
